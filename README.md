@@ -2,7 +2,7 @@
 A repository template for creating new examples.
 -->
 
-# Product/Platform - Task
+# GridLookup for Web Forms - How to emulate a dropdown with grouped items
 
 The description in a free form.
 
@@ -14,8 +14,8 @@ Implementation details: steps, code snippets, and other technical information in
 
 ## Files to Look At
 
-- link.cs (VB: link.vb)
-- link.js
+- WebForm1.aspx
+- WebForm1.cs (VB: WebForm1.vb)
 - ...
 
 <!-- default file list end --> 
@@ -28,10 +28,5 @@ Implementation details: steps, code snippets, and other technical information in
 - link
 - ...
 
-## More Examples
-
-- link
-- link
-- ...
 
 -->
