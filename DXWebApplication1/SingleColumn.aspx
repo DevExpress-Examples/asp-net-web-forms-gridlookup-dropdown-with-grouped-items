@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="DXWebApplication1.WebForm1" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SingleColumn.aspx.cs" Inherits="DXWebApplication1.WebForm1" %>
 
 <!DOCTYPE html>
 
@@ -37,7 +37,6 @@
             <GridViewProperties>
                 <Settings ShowColumnHeaders="false" ShowGroupButtons="false" GroupFormat="{1}" />
                 <SettingsBehavior AutoExpandAllGroups="true" />
-              
                 <SettingsPager Mode="ShowAllRecords" />
             </GridViewProperties>
         </dx:ASPxGridLookup>

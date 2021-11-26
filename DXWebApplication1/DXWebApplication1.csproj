@@ -67,7 +67,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
-    <Content Include="WebForm1.aspx" />
+    <Content Include="MultiColumn.aspx" />
+    <Content Include="SingleColumn.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Web.config" />
@@ -83,13 +84,20 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WebForm1.aspx.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
+    <Compile Include="MultiColumn.aspx.cs">
+      <DependentUpon>MultiColumn.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="WebForm1.aspx.designer.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
+    <Compile Include="MultiColumn.aspx.designer.cs">
+      <DependentUpon>MultiColumn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SingleColumn.aspx.cs">
+      <DependentUpon>SingleColumn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SingleColumn.aspx.designer.cs">
+      <DependentUpon>SingleColumn.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
