@@ -22,7 +22,6 @@
                 clearTimeout(timeout);
             }
 
-
             timeout = setTimeout(function () {
                 var filter = s.GetInputElement().value;
                 s.GetGridView().ApplySearchPanelFilter(filter)
@@ -36,8 +35,7 @@
     <form id="form1" runat="server">
          <dx:ASPxGridLookup ID="gridLookup" runat="server" KeyFieldName="ContactId" 
              Width="300px" ClientInstanceName="gridLookup" TextFormatString="{1}" 
-             OnInit="gridLookup_Init" IncrementalFilteringMode="None"
-             >
+             OnInit="gridLookup_Init" IncrementalFilteringMode="None">
             <ClientSideEvents KeyUp="OnKeyPress" />
            <GridViewProperties>
          
