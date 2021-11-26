@@ -11,10 +11,7 @@
             color: black;
             background-color: lightgreen;
         }
-/*
-        .dataRow td.dxgvIndentCell {
-            display: none;
-        }*/
+
     </style>
     <script>
         var timeout = 0;
