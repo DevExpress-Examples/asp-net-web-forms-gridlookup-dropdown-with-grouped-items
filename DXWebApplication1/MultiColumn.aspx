@@ -22,13 +22,19 @@
                 clearTimeout(timeout);
             }
 
+            var keyCode = ASPxClientUtils.GetKeyCode(e.htmlEvent);
+
             timeout = setTimeout(function () {
                 var filter = s.GetInputElement().value;
+
+                if (keyCode == 37 || keyCode == 38 || keyCode == 39 || keyCode == 40) {
+                    return;
+                }
+
                 s.GetGridView().ApplySearchPanelFilter(filter)
+
             }, 500);
-
         }
-
     </script>
 </head>
 <body>
