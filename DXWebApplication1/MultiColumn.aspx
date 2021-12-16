@@ -16,13 +16,17 @@
     <script>
         var timeout = 0;
         function OnKeyPress(s, e) {
+
+            var keyCode = ASPxClientUtils.GetKeyCode(e.htmlEvent);
+
+            if (keyCode == 13)
+                return;
+
             s.ShowDropDown();
 
             if (timeout) {
                 clearTimeout(timeout);
             }
-
-            var keyCode = ASPxClientUtils.GetKeyCode(e.htmlEvent);
 
             timeout = setTimeout(function () {
                 var filter = s.GetInputElement().value;
