@@ -62,7 +62,6 @@
             </Columns>
             <GridViewStyles>
                 <GroupRow CssClass="groupRow" />
-                <Row CssClass="dataRow" />
             </GridViewStyles>
         </dx:ASPxGridLookup>
 
