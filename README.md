@@ -30,9 +30,9 @@ The example illustrates how to create a dropdown with grouped items. The impleme
 ## Files to Look At
 
 - [SingleColumn.aspx](./CS/DXWebApplication1/SingleColumn.aspx)
-- [SingleColumn.cs](./CS/DXWebApplication1/SingleColumn.cs) (VB: [SingleColumn.vb](./VB/DXWebApplication1/SingleColumn.vb))
+- [SingleColumn.cs](./CS/DXWebApplication1/SingleColumn.aspx.cs) (VB: [SingleColumn.vb](./VB/DXWebApplication1/SingleColumn.aspx.vb))
 - [MultiColumn.aspx](./CS/DXWebApplication1/MultiColumn.aspx)
-- [MultiColumn.cs](./CS/DXWebApplication1/MultiColumn.cs) (VB: [MultiColumn.vb](./VB/DXWebApplication1/MultiColumn.vb))
+- [MultiColumn.cs](./CS/DXWebApplication1/MultiColumn.aspx.cs) (VB: [MultiColumn.vb](./VB/DXWebApplication1/MultiColumn.aspx.vb))
 
 <!-- default file list end --> 
 
