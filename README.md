@@ -11,6 +11,7 @@
 
 The example illustrates how to create a dropdown with grouped items. The implementation uses the nested grid's <a href="https://docs.devexpress.com/AspNet/js-ASPxClientGridView.ApplySearchPanelFilter(value)">ApplySearchPanelFilter</a> method to filter and search the data columns. The method is executed in the client-side **OnKeyPress** event of the GridLookup.
 
+# JavaScript
 ```cs
         var timeout = 0;
         function OnKeyPress(s, e) {
