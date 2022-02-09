@@ -7,7 +7,7 @@
     <title></title>
         <style>
         .groupRow {
-            font-weight: bold;
+           font-weight: bold;
             color: black;
             background-color: lightgreen;
         }
