@@ -29,6 +29,7 @@ namespace DXWebApplication1
             list.Add(new Contact { ContactId = 10, ContactName = "Harold", Region = "China" });
 
             return list;
+            
         }
 
     }
