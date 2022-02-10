@@ -6,7 +6,7 @@
 
 # GridLookup for Web Forms - How to emulate a dropdown with grouped items
 <!-- run online -->
-**[[Run Online]](https://codecentral.devexpress.com/454625952/SingleColumn.aspx)**
+**[[Run Online]](https://codecentral.devexpress.com/454625952/)**
 <!-- run online end -->
 
 
