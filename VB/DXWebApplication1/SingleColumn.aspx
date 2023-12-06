@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SingleColumn.aspx.cs" Inherits="DXWebApplication1.WebForm1" %>
+<%@ Page Language="VB" AutoEventWireup="true" CodeBehind="SingleColumn.aspx.vb" Inherits="DXWebApplication1.WebForm1" %>
 
 <!DOCTYPE html>
 
@@ -7,7 +7,7 @@
     <title></title>
         <style>
         .groupRow {
-            font-weight: bold;
+           font-weight: bold;
             color: black;
             background-color: lightgreen;
         }

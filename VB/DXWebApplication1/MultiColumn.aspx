@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="MultiColumn.aspx.cs" Inherits="DXWebApplication1.MultiColumn" %>
+<%@ Page Language="VB" AutoEventWireup="true" CodeBehind="MultiColumn.aspx.vb" Inherits="DXWebApplication1.MultiColumn" %>
 
 <!DOCTYPE html>
 
