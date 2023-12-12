@@ -4,82 +4,74 @@
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
 
-# GridLookup for Web Forms - How to emulate a dropdown with grouped items
+# Grid Lookup for ASP.NET Web Forms - How to create a dropdown with grouped items
 <!-- run online -->
 **[[Run Online]](https://codecentral.devexpress.com/454625952/)**
 <!-- run online end -->
 
+The example demonstrates how to create a dropdown with grouped items. 
 
-The example illustrates how to create a dropdown with grouped items. 
+![image](drop-down-with-groups.png)
 
-![image](https://user-images.githubusercontent.com/69703500/152309609-d46559e1-f75a-4a28-aa90-3f3d4db712e6.png)
+## Implementation Details
+
+In this example, the client [ASPxClientGridLookup.KeyPress](https://docs.devexpress.com/AspNet/js-ASPxClientTextEdit.KeyPress) event is handled to implement incremental filtering. The event handler uses the nested grid's [ApplySearchPanelFilter](https://docs.devexpress.com/AspNet/js-ASPxClientGridView.ApplySearchPanelFilter(value)) method to filter data columns. The [ASPxClientUtils.GetKeyCode](https://docs.devexpress.com/AspNet/js-ASPxClientUtils.GetKeyCode.static(htmlEvent)) method returns the key pressed. 
+
+To prevent multiple callback requests when keys are pressed in succession, `setTimeout` and `clearTimeout` methods are used. 
+
+The Enter key and Arrow keys send a callback request when they are pressed in the `KeyPress` event. Check for the key pressed and prevent filtering when these key are pressed to avoid sending callback requests.
 
 
-The implementation uses the nested grid's <a href="https://docs.devexpress.com/AspNet/js-ASPxClientGridView.ApplySearchPanelFilter(value)">ApplySearchPanelFilter</a> method to filter and search the data columns. The method is executed in the client-side **OnKeyPress** event of the GridLookup to simulate incremental filtering. Use the client-side <a href="https://docs.devexpress.com/AspNet/js-ASPxClientUtils.GetKeyCode.static(htmlEvent)">ASPxClientUtils.GetKeyCode</a> method to get the key pressed. To prevent multiple callback requests when keys are pressed in succession, use JavaScript's **setTimeout** and **clearTimeout** methods. Please note that the Enter key and Arrow keys will send a callback request when they are pressed in the OnKeyPress event. In this case, check for the key pressed in the event and prevent filtering to avoid sending callback requests.
-
-# JavaScript
-
-```cs
-        var timeout = 0;
-        function OnKeyPress(s, e) {
-            var keyCode = ASPxClientUtils.GetKeyCode(e.htmlEvent);
-
-            if (keyCode == 13)
-                return;
-
-            s.ShowDropDown();
-
-            if (timeout) {
-                clearTimeout(timeout);
-            }
-
-            timeout = setTimeout(function () {
-                var filter = s.GetInputElement().value;
-                if (keyCode == 37 || keyCode == 38 || keyCode == 39 || keyCode == 40) {
-                    return;
-                }
-                s.GetGridView().ApplySearchPanelFilter(filter)
-            }, 500);
+```jscript
+var timeout = 0;
+function OnKeyPress(s, e) {
+    var keyCode = ASPxClientUtils.GetKeyCode(e.htmlEvent);
+    if (keyCode == 13)
+        return;
+    s.ShowDropDown();
+    if (timeout) {
+        clearTimeout(timeout);
+    }
+    timeout = setTimeout(function () {
+        var filter = s.GetInputElement().value;
+        if (keyCode == 37 || keyCode == 38 || keyCode == 39 || keyCode == 40) {
+            return;
         }
-
+        s.GetGridView().ApplySearchPanelFilter(filter)
+    }, 500);
+}
 ```
 
-The nested GridView may not look visually pleasing. In this case, apply custom CSS classes to make it look like a standard dropdown.
+Apply custom CSS classes to make grid look like a standard dropdown.
 
-# For single column implementation
-
-```cs
-        .groupRow {
-            font-weight: bold;
-            color: black;
-            background-color: lightgreen;
-        }
-
-        .dataRow td.dxgvIndentCell {
-            display: none;
-        }
-```
-
-# For multi-column implementation
+### Single column implementation
 
 ```cs
-        .groupRow {
-           font-weight: bold;
-            color: black;
-            background-color: lightgreen;
-        }
+.groupRow {
+    font-weight: bold;
+    color: black;
+    background-color: lightgreen;
+}
+
+.dataRow td.dxgvIndentCell {
+    display: none;
+}
 ```
 
-<!-- default file list -->
+### Multi-column implementation
 
-## Files to Look At
+```cs
+.groupRow {
+   font-weight: bold;
+    color: black;
+    background-color: lightgreen;
+}
+```
 
-- [SingleColumn.aspx](./CS/DXWebApplication1/SingleColumn.aspx)
-- [SingleColumn.cs](./CS/DXWebApplication1/SingleColumn.aspx.cs)
-- [MultiColumn.aspx](./CS/DXWebApplication1/MultiColumn.aspx)
-- [MultiColumn.cs](./CS/DXWebApplication1/MultiColumn.aspx.cs)
+## Files to Review
 
-<!-- default file list end --> 
-
-<!-- 
+* [SingleColumn.aspx](./CS/DXWebApplication1/SingleColumn.aspx) (VB: [SingleColumn.aspx](./VB/DXWebApplication1/SingleColumn.aspx))
+* [SingleColumn.cs](./CS/DXWebApplication1/SingleColumn.aspx.cs) (VB: [SingleColumn.vb](./VB/DXWebApplication1/SingleColumn.aspx.vb))
+* [MultiColumn.aspx](./CS/DXWebApplication1/MultiColumn.aspx) (VB: [MultiColumn.aspx](./VB/DXWebApplication1/MultiColumn.aspx))
+* [MultiColumn.cs](./CS/DXWebApplication1/MultiColumn.aspx.cs) (VB: [MultiColumn.vb](./VB/DXWebApplication1/MultiColumn.aspx.vb))
 
