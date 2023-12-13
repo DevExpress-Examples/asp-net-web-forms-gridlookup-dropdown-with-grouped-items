@@ -18,7 +18,7 @@ In this example, the client [ASPxClientGridLookup.KeyPress](https://docs.devexpr
 
 To prevent multiple callback requests when keys are pressed in succession, `setTimeout` and `clearTimeout` methods are used. 
 
-The Enter key and Arrow keys send a callback request when they are pressed in the `KeyPress` event. Call the [ASPxClientUtils.GetKeyCode](https://docs.devexpress.com/AspNet/js-ASPxClientUtils.GetKeyCode.static(htmlEvent)) method to get the key pressed and prevent filtering when these key are pressed to avoid sending callback requests.
+The Enter key and Arrow keys send a callback request when they are pressed in the `KeyPress` event. Call the [ASPxClientUtils.GetKeyCode](https://docs.devexpress.com/AspNet/js-ASPxClientUtils.GetKeyCode.static(htmlEvent)) method to get the key that was pressed and prevent filtering when these keys are pressed to avoid sending callback requests.
 
 
 ```jscript
@@ -41,7 +41,7 @@ function OnKeyPress(s, e) {
 }
 ```
 
-Apply custom CSS classes to make grid look like a standard dropdown.
+Apply custom CSS classes to make the grid look like a standard dropdown.
 
 Single column implementation:
 
