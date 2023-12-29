@@ -5,9 +5,6 @@
 <!-- default badges end -->
 
 # Grid Lookup for ASP.NET Web Forms - How to create a dropdown with grouped items
-<!-- run online -->
-**[[Run Online]](https://codecentral.devexpress.com/454625952/)**
-<!-- run online end -->
 
 The example demonstrates how to create a dropdown with grouped items. 
 
