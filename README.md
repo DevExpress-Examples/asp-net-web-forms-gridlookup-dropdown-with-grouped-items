@@ -73,7 +73,7 @@ Multi-column implementation:
 * [MultiColumn.aspx](./CS/DXWebApplication1/MultiColumn.aspx) (VB: [MultiColumn.aspx](./VB/DXWebApplication1/MultiColumn.aspx))
 * [MultiColumn.cs](./CS/DXWebApplication1/MultiColumn.aspx.cs) (VB: [MultiColumn.vb](./VB/DXWebApplication1/MultiColumn.aspx.vb))
 <!-- feedback -->
-## Does this example address your development requirements/objectives?
+## Does This Example Address Your Development Requirements/Objectives?
 
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=asp-net-web-forms-gridlookup-dropdown-with-grouped-items&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=asp-net-web-forms-gridlookup-dropdown-with-grouped-items&~~~was_helpful=no)
 
